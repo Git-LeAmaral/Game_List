@@ -1,7 +1,7 @@
 package org.lehdev.game_list.dto;
 
-import jakarta.persistence.Column;
 import org.lehdev.game_list.entities.Game;
+import org.lehdev.game_list.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -19,6 +19,14 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
     public Long getId() {

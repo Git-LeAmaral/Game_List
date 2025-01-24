@@ -1,7 +1,6 @@
 package org.lehdev.game_list.controllers;
 
 import org.lehdev.game_list.dto.GameMinDTO;
-import org.lehdev.game_list.entities.Game;
 import org.lehdev.game_list.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
